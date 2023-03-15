@@ -1,0 +1,183 @@
+:root{
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dar-Blue: hsl(249, 10%, 26%); 
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("./images/bg-intro-mobile.png");
+    background-color: var(--Red);
+    color: #ffffff;
+    font-size: 16px; 
+}
+.container{
+    width: 100%;
+    padding: 3rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+    max-width: 300px;
+    padding-bottom: 2.5rem;
+}
+.left h2{
+    padding-bottom: 2rem;
+}
+.right .info{
+    background-color: var(--Blue);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 6px 6px 0px 5px hsl(0, 72%, 66%);
+}
+form{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+form .form-control{
+    margin-bottom: 1rem;
+}
+.form-control input{
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    border-radius: 5px;
+    border-style: none;
+    border: 1px solid #000;
+}
+.form-control input:focus{
+    border: .5px solid var(--Dar-Blue);
+}
+.form-control .icon-error{
+    display: none;
+    position: relative;
+    top: -1.8rem;
+    left: 10rem;
+}
+.form-control.error input{
+     border: 2px solid var(--Red);
+}
+small{
+    display: block;
+    color: var(--Red);
+    float: right;
+    margin-top: -15px;
+}
+form .reference{
+    color: #000;
+}
+form .reference a{
+    color: var(--Red);
+    text-decoration: none;
+}
+.right button{
+    background-color: var(--Green);
+    border-style: none;
+    outline: none;
+    width: 100%;
+    padding: .5rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+.attribution { font-size: 11px; text-align: center; position: fixed; bottom: 0;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media screen and (min-width: 1042px){
+    body{
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+        flex-direction: row;
+        text-align: left;
+        gap: 6rem;
+    }
+    .left{
+        width: 450px;
+        padding-bottom: 2rem;
+    }
+    .left h2{
+        padding-bottom: 2rem;
+        font-size: 50px;
+    }
+    .right .info{
+        background-color: var(--Blue);
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+    }
+    form{
+        width: 100%;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    .icon-error{
+        display: none;
+        position: relative;
+        top: -1.8rem;
+        left: 21rem;
+    }
+
+}
+
+@media screen and (min-width: 800px){
+    body{
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+        flex-direction: row;
+        text-align: left;
+        gap: 3rem;
+    }
+    .left{
+        max-width: 300px;
+        padding-bottom: 2rem;
+    }
+    .left h2{
+        padding-bottom: 2rem;
+        font-size: 40px;
+    }
+    .right .info{
+        background-color: var(--Blue);
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+    }
+    form{
+        width: 100%;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    .icon-error{
+        position: relative;
+        top: -1.8rem;
+        left: 23rem;
+    }
+
+}
+@media screen and (min-width: 400px){
+    .form-control .icon-error{
+        position: relative;
+        top: -1.8rem;
+        left: 20rem;
+    }
+}
